@@ -7,7 +7,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dist: ['dist/*.js', '../wave_front/js/*.js']
+            dist: ['dist/*.js', '../wave_front/js/dist/*.js'],
+            options: {
+                force: true
+            }
         },
         copy: {
             dist: {
